@@ -7,12 +7,11 @@ type InputsFormulario = {
 };
 
 export default function HookForm() {
-  const {
-    register,
-    handleSubmit,
-    /*watch,
-    formState: { errors },*/
-  } = useForm<InputsFormulario>();
+  /* 
+  -- useForm completo como seria:
+  const {register, handleSubmit, watch, formState:{errors},} = useForm<InputsFormulario>(); 
+  */
+  const { register, handleSubmit } = useForm<InputsFormulario>();
   const onSubmit: SubmitHandler<InputsFormulario> = (data) => {
     console.log("Formulário com react-hook-form");
     console.log(data);
