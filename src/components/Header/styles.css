@@ -1,0 +1,22 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: antiquewhite;
+  padding: 0 20px;
+}
+
+.navlink-container {
+  display: flex;
+  gap: 30px;
+}
+
+.navlink-container a {
+  text-decoration: none;
+  color: unset;
+}
+
+.navlink-container a:hover {
+  color: blue;
+  border-bottom: 1px solid blue;
+}
