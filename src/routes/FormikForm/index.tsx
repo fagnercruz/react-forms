@@ -1,5 +1,5 @@
 export default function FormikForm() {
-  function handleSubmit(event) {
+  function handleSubmit(event: React.SyntheticEvent) {
     event.preventDefault();
     console.log("Formulário com Formik:");
     //console.log(dadosForm);
