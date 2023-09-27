@@ -1,4 +1,4 @@
-import { Formik, Form } from "formik";
+import { Formik, Form, Field } from "formik";
 
 export default function FormikForm() {
   return (
@@ -8,37 +8,16 @@ export default function FormikForm() {
       <Formik
         initialValues={{ nome: "", email: "", senha: "" }}
         onSubmit={(values, { setSubmitting }) => {
-          console.log("Formulário Formik");
+          console.log("Formulário Formik - Sem boilerplate");
           console.log(values);
           setSubmitting(false);
         }}
       >
-        {({ values, handleChange, handleSubmit, handleBlur, isSubmitting }) => (
-          <Form className="form-testes" onSubmit={handleSubmit}>
-            <input
-              type="text"
-              placeholder="Nome"
-              name="nome"
-              value={values.nome}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            <input
-              type="email"
-              placeholder="e-mail"
-              name="email"
-              value={values.email}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
-            <input
-              type="password"
-              placeholder="senha"
-              name="senha"
-              value={values.senha}
-              onChange={handleChange}
-              onBlur={handleBlur}
-            />
+        {({ isSubmitting }) => (
+          <Form className="form-testes">
+            <Field type="text" name="nome" />
+            <Field type="email" name="email" />
+            <Field type="password" name="senha" />
             <button type="submit" disabled={isSubmitting}>
               Enviar
             </button>
