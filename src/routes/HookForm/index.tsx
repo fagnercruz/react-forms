@@ -19,8 +19,8 @@ export default function HookForm() {
 
   return (
     <>
-      <h1>Formulário com react-hook-form</h1>
       <form className="form-testes" onSubmit={handleSubmit(onSubmit)}>
+        <h1>React Hook Form</h1>
         <input type="text" placeholder="Nome" {...register("nome")} />
         <input
           type="email"

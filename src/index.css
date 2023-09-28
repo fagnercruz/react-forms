@@ -10,6 +10,8 @@ body {
 
   max-width: 400px;
   gap: 10px;
+
+  margin: 10px auto;
 }
 
 input,
